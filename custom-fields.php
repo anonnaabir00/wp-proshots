@@ -11,7 +11,7 @@
 
         
     function wp_proshots_hide_acf($show_admin) {
-        return true;
+        return false;
     }
 
     add_filter('acf/settings/show_admin', 'wp_proshots_hide_acf');
