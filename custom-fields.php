@@ -11,7 +11,7 @@
 
         
     function wp_proshots_hide_acf($show_admin) {
-        return false;
+        return true;
     }
 
     add_filter('acf/settings/show_admin', 'wp_proshots_hide_acf');
@@ -23,68 +23,6 @@
 
     if( function_exists('acf_add_local_field_group') ):
 
-        acf_add_local_field_group(array(
-            'key' => 'group_5f662d5207265',
-            'title' => 'License Manager Fields',
-            'fields' => array(
-                array(
-                    'key' => 'field_5f662d699affb',
-                    'label' => 'License Details',
-                    'name' => 'wp_proshots_license_details',
-                    'type' => 'text',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => array(
-                        'width' => '',
-                        'class' => '',
-                        'id' => '',
-                    ),
-                    'default_value' => '',
-                    'placeholder' => '',
-                    'prepend' => '',
-                    'append' => '',
-                    'maxlength' => '',
-                ),
-                array(
-                    'key' => 'field_5f72c29a0d6bf',
-                    'label' => 'License Description',
-                    'name' => 'wp_proshots_license_description',
-                    'type' => 'wysiwyg',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => array(
-                        'width' => '',
-                        'class' => '',
-                        'id' => '',
-                    ),
-                    'default_value' => '',
-                    'tabs' => 'visual',
-                    'toolbar' => 'full',
-                    'media_upload' => 1,
-                    'delay' => 0,
-                ),
-            ),
-            'location' => array(
-                array(
-                    array(
-                        'param' => 'post_type',
-                        'operator' => '==',
-                        'value' => 'license_manager',
-                    ),
-                ),
-            ),
-            'menu_order' => 0,
-            'position' => 'normal',
-            'style' => 'default',
-            'label_placement' => 'top',
-            'instruction_placement' => 'label',
-            'hide_on_screen' => '',
-            'active' => true,
-            'description' => '',
-        ));
-        
         acf_add_local_field_group(array(
             'key' => 'group_5f66280f13baa',
             'title' => 'Stock Photo Informations',
@@ -107,28 +45,6 @@
                     'toolbar' => 'full',
                     'media_upload' => 1,
                     'delay' => 0,
-                ),
-                array(
-                    'key' => 'field_5f6628b8d062f',
-                    'label' => 'Select License Type',
-                    'name' => 'select_license_type',
-                    'type' => 'post_object',
-                    'instructions' => '',
-                    'required' => 0,
-                    'conditional_logic' => 0,
-                    'wrapper' => array(
-                        'width' => '',
-                        'class' => '',
-                        'id' => '',
-                    ),
-                    'post_type' => array(
-                        0 => 'license_manager',
-                    ),
-                    'taxonomy' => '',
-                    'allow_null' => 0,
-                    'multiple' => 0,
-                    'return_format' => 'object',
-                    'ui' => 1,
                 ),
             ),
             'location' => array(
