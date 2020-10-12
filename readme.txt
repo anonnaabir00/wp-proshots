@@ -1,6 +1,6 @@
-=== Proshots For WooCommerce ===
+# Proshots For WooCommerce
 Contributors: codember, asadabir
-Tags: woocommerce,sku,sku to isbn,product sku
+Tags: stock photo, microstock, sell photos
 Donate link: https://codember.com/
 Requires at least: 3.0.1
 Tested up to: 5.5
@@ -57,8 +57,6 @@ No need to worry about compatibility with your themes. We have tested Proshots w
 * Comes with professional image layout (Justified layout)
 
 
-
-
 ## Frequently Asked Questions
 
 * Does the plugin require any special settings/plugins?
@@ -69,19 +67,14 @@ Ans: You must install WooCommerce before installing this plugin.
 
 Ans: Justify Layout and Lazy Loader only available on Category and Tag pages. Shop page will not affect.
 
-== Screenshots ==
-1. Settings Page
-2. WooCommerce Backend
-3. WooCommerce Frontend
 
-== Changelog ==
+# Screenshots
+
+1. Layout Settings
+2. Override Settings
+3. Stock Photo Product Type
+4. Watermark Settings
+
+# Changelog
 
 1.0: Initial Release
-1.1: README Updated And Asset File Changed
-1.2: Few Bug Fixed
-1.3: Compatible With Latest WooCommerce Version 3.9.0
-1.4: Compatible With Latest WooCommerce Version 4.2.0
-1.5:
-- Tested on latest WordPress version 5.5
-- Compatible With Latest WooCommerce Version 4.5.2
-- Plugin Header Updated
