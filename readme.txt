@@ -13,8 +13,7 @@ Sell your photos, arts, vectors using WooCommerce. Included with Custom Product 
 
 # Description
 
-Turn your images into digital downloadable products with help of Proshots plugin. Proshots plugin helps professional photographers to sell their photos online as well as general persons to build a platform to sell free and premium stock photos. Not only that you will also be
-able to showcase your product in a different way with help of this plugin. There is no way to steal your valuable media files as there is high encryption and besides, the watermark is always there. There are a lot of features come with Proshots, if you don’t try it you won’t be
+Turn your images into digital downloadable products with help of Proshots plugin. Proshots plugin helps professional photographers to sell their photos online as well as general persons to build a platform to sell free and premium stock photos. Not only that you will also be able to showcase your product in a different way with help of this plugin. There is no way to steal your valuable media files as there is high encryption and besides, the watermark is always there. There are a lot of features come with Proshots, if you don’t try it you won’t be
 able to know its significance. Some of the major features are given below.
 
 # Proshots Features
