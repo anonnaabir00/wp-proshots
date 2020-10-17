@@ -291,24 +291,6 @@
 
         )
       ) );
-
-  //
-
-
-      // Proshots Activation
-      // CSF::createSection( $prefix, array(
-      //   'title'  => 'Activation',
-      //   'fields' => array(
-    
-      //     // A textarea field
-      //     array(
-      //       'id'    => 'opt-textarea',
-      //       'type'  => 'textarea',
-      //       'title' => 'Simple Textarea',
-      //     ),
-    
-      //   )
-      // ) ); 
        
     
     }
