@@ -2807,6 +2807,36 @@ CSF::createSection( $prefix, array(
 ) );
 
 //
+// Field: link
+//
+CSF::createSection( $prefix, array(
+  'parent'      => 'additional_fields',
+  'title'       => 'Link',
+  'icon'        => 'fas fa-link',
+  'description' => 'Visit documentation for more details on this field: <a href="http://codestarframework.com/documentation/#/fields?id=link" target="_blank">Field: link</a>',
+  'fields'      => array(
+
+    array(
+      'id'    => 'opt-link-1',
+      'type'  => 'link',
+      'title' => 'Link',
+    ),
+
+    array(
+      'id'       => 'opt-link-2',
+      'type'     => 'link',
+      'title'    => 'Link with default',
+      'default'  => array(
+        'url'    => 'http://codestarframework.com/',
+        'text'   => 'Codestar Framework',
+        'target' => '_blank'
+      ),
+    ),
+
+  )
+) );
+
+//
 // Field: date
 //
 CSF::createSection( $prefix, array(
@@ -2924,6 +2954,20 @@ CSF::createSection( $prefix, array(
         'opt-8'  => 'http://codestarframework.com/assets/images/placeholder/80x80-2c3e50.gif',
       ),
       'default'  => array( 'opt-3', 'opt-4', 'opt-5', 'opt-6' )
+    ),
+
+    array(
+      'id'      => 'opt-image-select-5',
+      'type'    => 'image_select',
+      'title'   => 'Image Select inline style',
+      'inline'  => true,
+      'options' => array(
+        'opt-1' => 'http://codestarframework.com/assets/images/placeholder/80x80-e74c3c.gif',
+        'opt-2' => 'http://codestarframework.com/assets/images/placeholder/80x80-ffbc00.gif',
+        'opt-3' => 'http://codestarframework.com/assets/images/placeholder/80x80-3498db.gif',
+        'opt-4' => 'http://codestarframework.com/assets/images/placeholder/80x80-2ecc71.gif',
+      ),
+      'default' => 'opt-1'
     ),
 
   )

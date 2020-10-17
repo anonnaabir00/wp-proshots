@@ -84,12 +84,12 @@ if ( ! class_exists( 'WP_Customize_Control_CSF' ) && class_exists( 'WP_Customize
       $class = 'customize-control customize-control-'. $this->type . $visible;
 
       echo '<li id="'. esc_attr( $id ) .'" class="'. esc_attr( $class ) .'"'. $depend .'>';
-      $this->render_content();
+      $this->render_field_content();
       echo '</li>';
 
     }
 
-    public function render_content() {
+    public function render_field_content() {
 
       $complex = array(
         'accordion',
@@ -104,6 +104,7 @@ if ( ! class_exists( 'WP_Customize_Control_CSF' ) && class_exists( 'WP_Customize
         'group',
         'image_select',
         'link_color',
+        'link',
         'media',
         'palette',
         'repeater',

@@ -297,9 +297,9 @@ if ( ! class_exists( 'CSF_Options' ) ) {
 
         } else if ( ! empty( $transient['reset_section'] ) && ! empty( $section_id ) ) {
 
-          if ( ! empty( $this->pre_sections[$section_id]['fields'] ) ) {
+          if ( ! empty( $this->pre_sections[$section_id-1]['fields'] ) ) {
 
-            foreach ( $this->pre_sections[$section_id]['fields'] as $field ) {
+            foreach ( $this->pre_sections[$section_id-1]['fields'] as $field ) {
               if ( ! empty( $field['id'] ) ) {
                 $data[$field['id']] = $this->get_default( $field );
               }
@@ -489,7 +489,7 @@ if ( ! class_exists( 'CSF_Options' ) ) {
 
     public function add_admin_footer_text() {
       $default = 'Thank you for creating with <a href="http://codestarframework.com/" target="_blank">Codestar Framework</a>';
-      echo ( ! empty( $this->args['footer_credit'] ) ) ? wp_kses_post( $this->args['footer_credit'] ) : $default;
+      echo ( ! empty( $this->args['footer_credit'] ) ) ? $this->args['footer_credit'] : $default;
     }
 
     public function error_check( $sections, $err = '' ) {
@@ -556,7 +556,7 @@ if ( ! class_exists( 'CSF_Options' ) ) {
             $notice_class = ( ! empty( $this->notice ) ) ? 'csf-form-show' : '';
             $notice_text  = ( ! empty( $this->notice ) ) ? $this->notice : '';
 
-            echo '<div class="csf-form-result csf-form-success '. esc_attr( $notice_class ) .'">'. wp_kses_post( $notice_text ) .'</div>';
+            echo '<div class="csf-form-result csf-form-success '. esc_attr( $notice_class ) .'">'. $notice_text .'</div>';
 
             echo ( $this->args['show_form_warning'] ) ? '<div class="csf-form-result csf-form-warning">'. esc_html__( 'You have unsaved changes, save your changes!', 'csf' ) .'</div>' : '';
 
@@ -594,7 +594,7 @@ if ( ! class_exists( 'CSF_Options' ) ) {
 
                   echo '<li class="csf-tab-item">';
 
-                    echo '<a href="#tab='. esc_attr( $tab_id ) .'" data-tab-id="'. esc_attr( $tab_id ) .'" class="csf-arrow">'. wp_kses_post( $tab_icon . $tab['title'] . $tab_error ) .'</a>';
+                    echo '<a href="#tab='. esc_attr( $tab_id ) .'" data-tab-id="'. esc_attr( $tab_id ) .'" class="csf-arrow">'. $tab_icon . $tab['title'] . $tab_error .'</a>';
 
                     echo '<ul>';
 
@@ -604,7 +604,7 @@ if ( ! class_exists( 'CSF_Options' ) ) {
                       $sub_error = $this->error_check( $sub );
                       $sub_icon  = ( ! empty( $sub['icon'] ) ) ? '<i class="csf-tab-icon '. esc_attr( $sub['icon'] ) .'"></i>' : '';
 
-                      echo '<li><a href="#tab='. esc_attr( $sub_id ) .'" data-tab-id="'. esc_attr( $sub_id ) .'">'. wp_kses_post( $sub_icon . $sub['title'] . $sub_error ) .'</a></li>';
+                      echo '<li><a href="#tab='. esc_attr( $sub_id ) .'" data-tab-id="'. esc_attr( $sub_id ) .'">'. $sub_icon . $sub['title'] . $sub_error .'</a></li>';
 
                     }
 
@@ -614,7 +614,7 @@ if ( ! class_exists( 'CSF_Options' ) ) {
 
                 } else {
 
-                  echo '<li class="csf-tab-item"><a href="#tab='. esc_attr( $tab_id ) .'" data-tab-id="'. esc_attr( $tab_id ) .'">'. wp_kses_post( $tab_icon . $tab['title'] . $tab_error ) .'</a></li>';
+                  echo '<li class="csf-tab-item"><a href="#tab='. esc_attr( $tab_id ) .'" data-tab-id="'. esc_attr( $tab_id ) .'">'. $tab_icon . $tab['title'] . $tab_error .'</a></li>';
 
                 }
 
@@ -637,11 +637,11 @@ if ( ! class_exists( 'CSF_Options' ) ) {
               $section_icon   = ( ! empty( $section['icon'] ) ) ? '<i class="csf-section-icon '. esc_attr( $section['icon'] ) .'"></i>' : '';
               $section_title  = ( ! empty( $section['title'] ) ) ? $section['title'] : '';
               $section_parent = ( ! empty( $section['ptitle'] ) ) ? sanitize_title( $section['ptitle'] ) .'/' : '';
-              $section_id     = ( ! empty( $section['title'] ) ) ? sanitize_title( $section_title ) : '';
+              $section_slug   = ( ! empty( $section['title'] ) ) ? sanitize_title( $section_title ) : '';
 
-              echo '<div class="csf-section'. esc_attr( $section_onload . $section_class ) .'" data-section-id="'. esc_attr( $section_parent . $section_id ) .'">';
-              echo ( $has_nav ) ? '<div class="csf-section-title"><h3>'. wp_kses_post( $section_icon . $section_title ) .'</h3></div>' : '';
-              echo ( ! empty( $section['description'] ) ) ? '<div class="csf-field csf-section-description">'. wp_kses_post( $section['description'] ) .'</div>' : '';
+              echo '<div class="csf-section hidden'. esc_attr( $section_onload . $section_class ) .'" data-section-id="'. esc_attr( $section_parent . $section_slug ) .'">';
+              echo ( $has_nav ) ? '<div class="csf-section-title"><h3>'. $section_icon . $section_title .'</h3></div>' : '';
+              echo ( ! empty( $section['description'] ) ) ? '<div class="csf-field csf-section-description">'. $section['description'] .'</div>' : '';
 
               if ( ! empty( $section['fields'] ) ) {
 
@@ -693,7 +693,7 @@ if ( ! class_exists( 'CSF_Options' ) ) {
           echo ( $this->args['show_reset_all'] ) ? '<input type="submit" name="csf_transient[reset]" class="button csf-warning-primary csf-reset-all csf-confirm" value="'. ( ( $this->args['show_reset_section'] ) ? esc_html__( 'Reset All', 'csf' ) : esc_html__( 'Reset', 'csf' ) ) .'" data-confirm="'. esc_html__( 'Are you sure you want to reset all settings to default values?', 'csf' ) .'">' : '';
           echo '</div>';
 
-          echo ( ! empty( $this->args['footer_text'] ) ) ? '<div class="csf-copyright">'. wp_kses_post( $this->args['footer_text'] ) .'</div>' : '';
+          echo ( ! empty( $this->args['footer_text'] ) ) ? '<div class="csf-copyright">'. $this->args['footer_text'] .'</div>' : '';
 
           echo '<div class="clear"></div>';
           echo '</div>';
@@ -706,7 +706,7 @@ if ( ! class_exists( 'CSF_Options' ) ) {
 
         echo '<div class="clear"></div>';
 
-        echo ( ! empty( $this->args['footer_after'] ) ) ? wp_kses_post( $this->args['footer_after'] ) : '';
+        echo ( ! empty( $this->args['footer_after'] ) ) ? $this->args['footer_after'] : '';
 
       echo '</div>';
 
