@@ -1,9 +1,9 @@
-# Proshots For WooCommerce
+=== Proshots For WooCommerce ===
 Contributors: codember, asadabir
 Tags: stock photo, microstock, sell photos
 Donate link: https://codember.com/
 Requires at least: 3.0.1
-Tested up to: 5.5
+Tested up to: 5.5.1
 Requires PHP: 5.4
 Stable tag: trunk
 License: GPLv2 or later
@@ -11,10 +11,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Sell your photos, arts, vectors using WooCommerce. Included with Custom Product Type, Watermark Support and much more.
 
-# Description
-
-Turn your images into digital downloadable products with help of Proshots plugin. Proshots plugin helps professional photographers to sell their photos online as well as general persons to build a platform to sell free and premium stock photos. Not only that you will also be able to showcase your product in a different way with help of this plugin. There is no way to steal your valuable media files as there is high encryption and besides, the watermark is always there. There are a lot of features come with Proshots, if you don’t try it you won’t be
-able to know its significance. Some of the major features are given below.
+Turn your images into digital downloadable products with help of Proshots. Proshots plugin helps professional photographers to sell their photos online as well as general persons to build a platform to sell free and premium stock photos. Not only that you will also be able to showcase your product in a different way with help of this plugin. There is no way to steal your valuable media files as there is high encryption and besides, the watermark is always there. There are a lot of features come with Proshots, if you don’t try it you won’t be able to know its significance. Some of the major features are given below.
 
 # Proshots Features
 
@@ -57,8 +54,7 @@ No need to worry about compatibility with your themes. We have tested Proshots w
 * Comes with professional image layout (Justified layout)
 
 
-## Frequently Asked Questions
-
+== Frequently Asked Questions ==
 * Does the plugin require any special settings/plugins?
 
 Ans: You must install WooCommerce before installing this plugin.
@@ -67,14 +63,10 @@ Ans: You must install WooCommerce before installing this plugin.
 
 Ans: Justify Layout and Lazy Loader only available on Category and Tag pages. Shop page will not affect.
 
-
-# Screenshots
-
+== Screenshots ==
 1. Layout Settings
 2. Override Settings
 3. Stock Photo Product Type
-4. Watermark Settings
 
-# Changelog
-
+== Changelog ==
 1.0: Initial Release
