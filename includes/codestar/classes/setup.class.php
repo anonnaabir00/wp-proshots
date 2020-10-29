@@ -503,15 +503,12 @@ if ( ! class_exists( 'CSF' ) ) {
       wp_enqueue_script( 'wp-color-picker' );
 
       // Font awesome 4 and 5 loader
-      
-      // Commented for future use.
-      
-      // if ( apply_filters( 'csf_fa4', false ) ) {
-      //   wp_enqueue_style( 'csf-fa', 'https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome'. $min .'.css', array(), '4.7.0', 'all' );
-      // } else {
-      //   wp_enqueue_style( 'csf-fa5', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all'. $min .'.css', array(), '5.14.0', 'all' );
-      //   wp_enqueue_style( 'csf-fa5-v4-shims', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/v4-shims'. $min .'.css', array(), '5.14.0', 'all' );
-      // }
+      if ( apply_filters( 'csf_fa4', false ) ) {
+        wp_enqueue_style( 'csf-fa', 'https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome'. $min .'.css', array(), '4.7.0', 'all' );
+      } else {
+        wp_enqueue_style( 'csf-fa5', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/all'. $min .'.css', array(), '5.14.0', 'all' );
+        wp_enqueue_style( 'csf-fa5-v4-shims', 'https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5.14.0/css/v4-shims'. $min .'.css', array(), '5.14.0', 'all' );
+      }
 
       // Main style
       wp_enqueue_style( 'csf', self::include_plugin_url( 'assets/css/style'. $min .'.css' ), array(), self::$version, 'all' );
