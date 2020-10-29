@@ -3,7 +3,7 @@
 
 // Gallery Controls
 
-console.log(wp_proshots_data.lightbox_image_protection);
+
 // console.log(wp_proshots_data.watermark_opacity);
 jQuery(document).ready(function(){
 
@@ -73,15 +73,6 @@ jQuery(document).ready(function(){
         "background": wp_proshots_data.caption_background_color,
       });
     });
-  });
-
-
-    jQuery(function(){
-      jQuery('img').css({
-        "font-size": "30px",
-        'color': '#FFFFFF',
-        "pointer-events": "none"
-      });
 
 
     // LazyLoad Controls
