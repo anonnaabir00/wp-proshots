@@ -73,4 +73,14 @@ Ans: Justify Layout and Lazy Loader only available on Category and Tag pages. Sh
 3. Stock Photo Product Type
 
 == Changelog ==
+
 1.0: Initial Release
+
+1.1:
+
+- Image Layout Issue Fixed
+- Watermark Issues Fixed
+- Lazy Loader Issue Fixed
+- Codestar Framework Updated
+- Additional Bug Fixed
+- README Updated
