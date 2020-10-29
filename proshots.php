@@ -3,14 +3,14 @@
     /**
      *
      * @link              https://codember.com/
-     * @since             1.0
+     * @since             1.1
      * @package           Sell your photos, arts, vectors using Woocommerce. Included with Custom Product Type, Watermark Support and much more.
      *
      * @wordpress-plugin
      * Plugin Name:       ProShots For WooCommerce
      * Plugin URI:        https://codember.com/
      * Description:       Sell your photos, arts, vectors using Woocommerce. Included with Custom Product Type, Watermark Support and much more.
-     * Version:           1.0
+     * Version:           1.1
      * Author:            Codember
      * Author URI:        https://codember.com/
      * License:           GPL-2.0+
