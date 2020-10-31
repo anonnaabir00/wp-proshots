@@ -56,7 +56,7 @@
             $layoutjs_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'assets/js/layout.js' ));
             $infinitegrid_ver = date("ymd-Gis", filemtime( plugin_dir_path( __FILE__ ) . 'lib/js/infinitegrid.pkgd.min.js' ));
 
-            if ( is_product_category() OR is_product_tag() ) {
+            if ( is_shop() OR is_product_category() OR is_product_tag() ) {
                 wp_enqueue_script( 'infinitegrid', plugins_url( 'lib/js/infinitegrid.pkgd.min.js', __FILE__ ), array(), $infinitegrid_ver, true);
                 wp_enqueue_script( 'layoutjs', plugins_url( 'assets/js/layout.js', __FILE__ ), array(), $layoutjs_ver, true);
                 wp_localize_script( 'layoutjs', 'wp_proshots_image_layout_data', $wp_proshots_image_layout_data);
