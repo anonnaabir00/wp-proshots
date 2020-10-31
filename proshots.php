@@ -23,5 +23,32 @@
     */
 
 
-require_once ('functions.php');
-require_once ('control.php');
+     /**
+        * Check if WooCommerce is active
+     **/
+
+    
+
+        if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
+            require_once ('functions.php');
+            require_once ('control.php');
+        }
+
+        else {
+            function wp_proshots_woocomerce_error_notice() {
+                ?>
+                <div class="notice notice-error is-dismissible" style="background-color:#7F54B3;">
+                    <p 
+                    style="color:#FFFFFF;
+                    font-size:16px;
+                    ">
+                    <strong>Proshots need an active installation of WooCommerce.</strong> Please install WooCommerce from plugin directory and enjoy Proshots.</p>
+                </div>
+                <?php
+            }
+            add_action( 'admin_notices', 'wp_proshots_woocomerce_error_notice' );
+        }
+
+
+
+
