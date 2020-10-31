@@ -84,3 +84,11 @@ Ans: Justify Layout and Lazy Loader only available on Category and Tag pages. Sh
 - Codestar Framework Updated
 - Additional Bug Fixed
 - README Updated
+
+
+1.2:
+
+- Image Layout Working On Shop Page (Elementor Only)
+- WooCommerce Installation Crash Fixed
+- Compatible and Tested with Latest WooCommerce Version 4.6.1
+- Compatible and Tested with Latest WordPress Version 5.5.3
