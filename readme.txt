@@ -13,9 +13,8 @@ Sell your photos, arts, vectors using WooCommerce. Included with Custom Product 
 
 Turn your images into digital downloadable products with help of Proshots. Proshots plugin helps professional photographers to sell their photos online as well as general persons to build a platform to sell free and premium stock photos. Not only that you will also be able to showcase your product in a different way with help of this plugin. There is no way to steal your valuable media files as there is high encryption and besides, the watermark is always there. There are a lot of features come with Proshots, if you don’t try it you won’t be able to know its significance. Some of the major features are given below.
 
-<figure class="video_container">
-  <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/bXUTqBECQeI?controls=0" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-</figure>
+
+[youtube https://www.youtube.com/watch?v=bXUTqBECQeI]
 
 # Proshots Features
 
@@ -71,6 +70,18 @@ Ans: Justify Layout and Lazy Loader only available on Category and Tag pages. Sh
 1. Layout Settings
 2. Override Settings
 3. Stock Photo Product Type
+
+
+
+## Privacy Policy
+Proshots For WooCommerce uses [Appsero](https://appsero.com) SDK to collect some telemetry data upon user's confirmation. This helps us to troubleshoot problems faster & make product improvements.
+
+Appsero SDK **does not gather any data by default.** The SDK only starts gathering basic telemetry data **when a user allows it via the admin notice**. We collect the data to ensure a great user experience for all our users.
+
+Integrating Appsero SDK **DOES NOT IMMEDIATELY** start gathering data, **without confirmation from users in any case.**
+
+Learn more about how [Appsero collects and uses this data](https://appsero.com/privacy-policy/).
+
 
 == Changelog ==
 

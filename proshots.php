@@ -28,7 +28,30 @@
      **/
 
     
+        require __DIR__ . '/vendor/autoload.php';
 
+
+        /**
+         * Initialize the plugin tracker
+         *
+         * @return void
+         */
+        function appsero_init_tracker_proshots_for_woocommerce() {
+
+            if ( ! class_exists( 'Appsero\Client' ) ) {
+            require_once __DIR__ . '/appsero/src/Client.php';
+            }
+
+            $client = new Appsero\Client( '038e8562-ba05-4499-b603-3cf0c5c6ed13', 'Proshots For WooCommerce', __FILE__ );
+
+            // Active insights
+            $client->insights()->init();
+
+        }
+
+        appsero_init_tracker_proshots_for_woocommerce();
+
+        
         if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
             require_once ('functions.php');
             require_once ('control.php');
