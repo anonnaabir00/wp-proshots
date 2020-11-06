@@ -103,3 +103,10 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 - WooCommerce Installation Crash Fixed
 - Compatible and Tested with Latest WooCommerce Version 4.6.1
 - Compatible and Tested with Latest WordPress Version 5.5.3
+
+
+1.3:
+
+- Image Layout Working On Search Page
+- Appsero Intregated
+- Compatible and Tested with Latest WooCommerce Version 4.6.2
