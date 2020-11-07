@@ -1,5 +1,8 @@
 ;
 
+jQuery(document).ready(function(){
+
+  // jQuery Start
 
 // Gallery Controls
 
@@ -75,3 +78,9 @@
               });
               
             });
+
+
+
+// jQuery End
+
+});
