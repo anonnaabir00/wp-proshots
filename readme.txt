@@ -66,11 +66,13 @@ Ans: You must install WooCommerce before installing this plugin.
 
 Ans: Justify Layout and Lazy Loader only available on Category and Tag pages. Shop page will not affect.
 
+
+
 == Screenshots ==
+
 1. Layout Settings
 2. Override Settings
 3. Stock Photo Product Type
-
 
 
 ## Privacy Policy
@@ -110,3 +112,10 @@ Learn more about how [Appsero collects and uses this data](https://appsero.com/p
 - Image Layout Working On Search Page
 - Appsero Intregated
 - Compatible and Tested with Latest WooCommerce Version 4.6.2
+
+
+1.4:
+
+- Single Product Image Issuse Fixed
+- README Updated
+- Added webp Support
