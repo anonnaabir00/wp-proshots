@@ -1,0 +1,16 @@
+{
+    "name": "nervythemes/proshots",
+    "autoload": {
+        "psr-4": {
+            "Nervythemes\\Proshots\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Asaduzzaman Abir",
+            "email": "anonnaabir00@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {}
+}
