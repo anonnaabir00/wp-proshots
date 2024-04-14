@@ -2,17 +2,17 @@
 
     /**
      *
-     * @link              https://codember.com/
-     * @since             1.4
-     * @package           Sell your photos, arts, vectors using Woocommerce. Included with Custom Product Type, Watermark Support and much more.
+     * @link              https://nervythemes.com/
+     * @since             1.5
+     * @package           Showcase your WooCommerce products beautifully.
      *
      * @wordpress-plugin
-     * Plugin Name:       ProShots For WooCommerce
-     * Plugin URI:        https://codember.com/
-     * Description:       Sell your photos, arts, vectors using Woocommerce. Included with Custom Product Type, Watermark Support and much more.
-     * Version:           1.4
-     * Author:            Codember
-     * Author URI:        https://codember.com/
+     * Plugin Name:       Product Showcase For WooCommerce
+     * Plugin URI:        https://nervythemes.com/proshots-for-woocommerce
+     * Description:       Showcase your WooCommerce products beautifully.
+     * Version:           1.5
+     * Author:            NervyThemes
+     * Author URI:        https://nervythemes.com/
      * License:           GPL-2.0+
      * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
      * Text Domain:       wp-proshots
@@ -22,56 +22,82 @@
 
     */
 
+    if ( ! defined( 'ABSPATH' ) ) {
+      exit;
+   }
+   
+   final class Proshots {
+   
+      private function __construct() {
+         $this->define_constants();
+         $this->load_dependency();
+         register_activation_hook( __FILE__, [ $this, 'activate' ] );
+         register_deactivation_hook( __FILE__, [ $this, 'deactivate' ] );
+         add_action( 'plugins_loaded', [ $this, 'init_plugin' ] );
+      }
+   
+      public static function init() {
+         static $instance = false;
+   
+         if ( ! $instance ) {
+            $instance = new self();
+         }
+   
+         return $instance;
+      }
 
-     /**
-        * Check if WooCommerce is active
-     **/
+      public function define_constants() {
+         define( 'PROSHOTS_VERSION', '1.5' );
+         define( 'PROSHOT_PLUGIN_FILE', __FILE__ );
+         define( 'PROSHOT_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
+         define( 'PROSHOT_ROOT_DIR_PATH', plugin_dir_path( __FILE__ ) );
+         define( 'PROSHOT_ROOT_DIR_URL', plugin_dir_url( __FILE__ ) );
+         define( 'PROSHOT_INCLUDES_DIR_PATH', PROSHOT_ROOT_DIR_PATH . 'includes/' );
+         define( 'PROSHOT_PLUGIN_SLUG', 'wp-proshots' );
+      }
 
-    
-        require __DIR__ . '/vendor/autoload.php';
+      public function on_plugins_loaded() {
+         do_action( 'proshots_loaded' );
+      }
+
+      public function init_plugin() {
+         $this->load_textdomain();
+         $this->dispatch_hooks();
+      }
+   
+      public function dispatch_hooks() {
+         Proshots\Autoload::init();
+         Proshots\Admin::init();
+         Proshots\Shortcode::init();
+         Proshots\API::init();
+         Proshots\Assets::init();
+      }
+   
+      public function load_textdomain() {
+         load_plugin_textdomain(
+            'wp-proshots',
+            false,
+            dirname( plugin_basename( __FILE__ ) ) . '/languages/'
+         );
+      }
+   
+      public function load_dependency() {
+         require_once PROSHOT_ROOT_DIR_PATH . 'library/vendor/autoload.php';
+         require_once PROSHOT_INCLUDES_DIR_PATH . 'autoload.php';
+      }
+   
+      public function activate() {
+
+      }
+   
+      public function deactivate() {
+   
+      }
+   }
+   
+   function proshots_start() {
+      return Proshots::init();
+   }
 
 
-        /**
-         * Initialize the plugin tracker
-         *
-         * @return void
-         */
-        function appsero_init_tracker_proshots_for_woocommerce() {
-
-            if ( ! class_exists( 'Appsero\Client' ) ) {
-            require_once __DIR__ . '/appsero/src/Client.php';
-            }
-
-            $client = new Appsero\Client( '038e8562-ba05-4499-b603-3cf0c5c6ed13', 'Proshots For WooCommerce', __FILE__ );
-
-            // Active insights
-            $client->insights()->init();
-
-        }
-
-        appsero_init_tracker_proshots_for_woocommerce();
-
-        
-        if ( in_array( 'woocommerce/woocommerce.php', apply_filters( 'active_plugins', get_option( 'active_plugins' ) ) ) ) {
-            require_once ('functions.php');
-            require_once ('control.php');
-        }
-
-        else {
-            function wp_proshots_woocomerce_error_notice() {
-                ?>
-                <div class="notice notice-error is-dismissible" style="background-color:#7F54B3;">
-                    <p 
-                    style="color:#FFFFFF;
-                    font-size:16px;
-                    ">
-                    <strong>Proshots need an active installation of WooCommerce.</strong> Please install WooCommerce from plugin directory and enjoy Proshots.</p>
-                </div>
-                <?php
-            }
-            add_action( 'admin_notices', 'wp_proshots_woocomerce_error_notice' );
-        }
-
-
-
-
+   proshots_start();   
