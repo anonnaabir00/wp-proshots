@@ -4,6 +4,7 @@ module.exports = {
     './ar_src/**/*.ts',
     './ar_src/**/*.vue',
     './templates/**/*.html',
+    './includes/templates/**/*.php',
     './parts/**/*.html',
     ],
   theme: {
