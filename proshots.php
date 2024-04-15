@@ -69,7 +69,7 @@
          Proshots\Autoload::init();
          Proshots\Admin::init();
          Proshots\Shortcode::init();
-         Proshots\API::init();
+         // Proshots\API::init();
          Proshots\Assets::init();
       }
    
