@@ -3,23 +3,20 @@
     /**
      *
      * @link              https://nervythemes.com/
-     * @since             1.5
+     * @since             2.0
      * @package           Showcase your WooCommerce products beautifully.
      *
      * @wordpress-plugin
      * Plugin Name:       Product Showcase For WooCommerce
      * Plugin URI:        https://nervythemes.com/proshots-for-woocommerce
      * Description:       Showcase your WooCommerce products beautifully.
-     * Version:           1.5
+     * Version:           2.0
      * Author:            NervyThemes
      * Author URI:        https://nervythemes.com/
      * License:           GPL-2.0+
      * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
      * Text Domain:       wp-proshots
-     * Tested up to:      5.5.3
-     * WC requires at least: 2.2
-     * WC tested up to: 4.6.2
-
+     * Tested up to:      6.5.2
     */
 
     if ( ! defined( 'ABSPATH' ) ) {
