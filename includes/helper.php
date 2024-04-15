@@ -43,6 +43,9 @@ class Helper {
             $reviews_count = $_product->get_review_count();
             $average_rating = $_product->get_average_rating();
 
+            // Get Add to Cart URL
+            $add_to_cart_url = $_product->add_to_cart_url();
+
             $data[] = array(
                 'id'          => $product->ID,
                 'name'        => $product->post_title,
@@ -52,6 +55,7 @@ class Helper {
                 'price'         => $price,
                 'reviews_count' => $reviews_count,
                 'average_rating'=> $average_rating,
+                'add_to_cart_url' => $add_to_cart_url,
             );
         }
 
