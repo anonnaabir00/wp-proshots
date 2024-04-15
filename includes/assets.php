@@ -15,6 +15,7 @@ class Assets {
     
     public function proshots_assets(){
         wp_enqueue_style( 'proshots_style', PROSHOT_ROOT_DIR_URL . 'includes/assets/style.css' );
+        wp_enqueue_style( 'proshots_main', PROSHOT_ROOT_DIR_URL . 'includes/assets/main.css' );
         wp_enqueue_script( 'proshots_script', PROSHOT_ROOT_DIR_URL . 'includes/assets/main.js',[], true, '1.0' );
     }
 }
