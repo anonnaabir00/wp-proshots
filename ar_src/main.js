@@ -1,4 +1,10 @@
-import { createApp } from 'vue'
+// Library
+import { createApp } from 'vue';
+import PrimeVue from 'primevue/config';
+
+// Components
 import App from './App.vue'
 
-createApp(App).mount('#proshost-products')
+const app = createApp(App);
+app.mount('#proshost-products');
+
